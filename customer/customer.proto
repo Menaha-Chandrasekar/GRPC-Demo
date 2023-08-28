@@ -1,0 +1,22 @@
+syntax ="proto3";
+
+option go_package="github.com/kiran-blockchain/netxd-go-advanced/grpc-demo2/task";
+
+package customer;
+
+service CustomerService{
+    rpc GetCustomer (Task) returns (TaskResponse);
+}
+
+message Task{
+    
+    string name=1;
+    int32 accountid=2;
+    int32 balance=3;
+    int32 bankid=4;
+}
+
+message TaskResponse{
+    string message =1;
+}
+
